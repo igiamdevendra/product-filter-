@@ -1,4 +1,10 @@
 const productsData = document.querySelector('#products');
+const searchedValue = document.querySelector('#search-input');
+const searchButton = document.querySelector('#search-btn');
+
+searchButton.addEventListener('click', () => {
+    filterProducts(searchedValue.value);
+});
 
 const products = {
     data: [
@@ -54,6 +60,8 @@ const products = {
 }
 
 
+
+
 function filterProducts(value){
     
 
@@ -91,5 +99,4 @@ function filterProducts(value){
     }
 }
 
-
-filterProducts();
+filterProducts(); // calling the function to display all products
